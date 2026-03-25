@@ -1,0 +1,11 @@
+﻿
+> velocity@0.0.0 lint
+> eslint .
+
+
+C:\Users\Acer\Desktop\velocity\src\hooks\usePointerDnD.ts
+  41:9  warning  The 'onPointerMove' function makes the dependencies of useEffect Hook (at line 77) change on every render. Move it inside the useEffect callback. Alternatively, wrap the definition of 'onPointerMove' in its own useCallback() Hook  react-hooks/exhaustive-deps
+  57:9  warning  The 'onPointerUp' function makes the dependencies of useEffect Hook (at line 77) change on every render. Move it inside the useEffect callback. Alternatively, wrap the definition of 'onPointerUp' in its own useCallback() Hook      react-hooks/exhaustive-deps
+
+Γ£û 2 problems (0 errors, 2 warnings)
+
