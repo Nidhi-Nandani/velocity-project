@@ -17,7 +17,7 @@ export const FilterBar: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-wrap items-center gap-8 py-6 mb-2">
+    <div className="flex flex-wrap items-center gap-4 md:gap-8 py-4 md:py-6 mb-2">
       <div className="flex flex-col gap-2.5">
         <label className="text-[9px] font-black uppercase tracking-[0.25em] text-indigo-400/70 ml-1">Status Protocol</label>
         <div className="flex gap-2">

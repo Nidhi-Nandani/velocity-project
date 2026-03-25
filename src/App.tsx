@@ -18,25 +18,25 @@ const App: React.FC = () => {
   const activeUsers = useTaskStore(state => state.activeUsers);
 
   return (
-    <div className="flex h-screen w-full flex-col bg-slate-950 px-8 py-6 overflow-hidden font-sans text-slate-50 relative selection:bg-indigo-500/30">
-      <header className="flex items-center justify-between py-4 mb-4 z-50 animate-fade-in">
-        <div className="flex items-center gap-6 group cursor-default">
-          <div className="h-14 w-14 rounded-3xl bg-indigo-600 flex items-center justify-center shadow-2xl shadow-indigo-500/40 rotate-3 transition-transform group-hover:rotate-6 duration-500 relative overflow-hidden">
+    <div className="flex min-h-screen h-screen w-full flex-col bg-slate-950 px-4 py-4 md:px-8 md:py-6 overflow-hidden font-sans text-slate-50 relative selection:bg-indigo-500/30">
+      <header className="flex flex-col md:flex-row md:items-center justify-between py-4 mb-4 z-50 animate-fade-in gap-6 md:gap-0">
+        <div className="flex items-center gap-4 md:gap-6 group cursor-default">
+          <div className="h-10 w-10 md:h-14 md:w-14 rounded-2xl md:rounded-3xl bg-indigo-600 flex items-center justify-center shadow-2xl shadow-indigo-500/40 rotate-3 transition-transform group-hover:rotate-6 duration-500 relative overflow-hidden">
              <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent" />
-             <LayoutGrid className="text-white relative z-10" size={28} />
+             <LayoutGrid className="text-white relative z-10 w-5 h-5 md:w-7 md:h-7" />
           </div>
           <div>
-            <h1 className="text-3xl font-black tracking-[0.15em] text-white leading-none mb-1 uppercase bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-200 to-indigo-400">VELOZITY</h1>
-            <div className="flex items-center gap-3">
-              <p className="text-[10px] font-black text-indigo-400/80 uppercase tracking-[0.3em]">Project Intelligence v1.0</p>
-              <div className="h-px w-8 bg-indigo-500/30" />
+            <h1 className="text-xl md:text-3xl font-black tracking-[0.1em] md:tracking-[0.15em] text-white leading-none mb-1 uppercase bg-clip-text text-transparent bg-gradient-to-r from-white via-indigo-200 to-indigo-400">VELOZITY</h1>
+            <div className="flex items-center gap-2 md:gap-3">
+              <p className="text-[8px] md:text-[10px] font-black text-indigo-400/80 uppercase tracking-[0.2em] md:tracking-[0.3em]">Project Intelligence v1.0</p>
+              <div className="h-px w-4 md:w-8 bg-indigo-500/30" />
             </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-10">
-          <div className="flex items-center gap-4 glass px-6 py-3 rounded-3xl border-white/5 shadow-2xl transition-all hover:bg-white/10 hover:scale-[1.02] duration-300">
-             <div className="flex -space-x-4">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-10">
+          <div className="hidden sm:flex items-center gap-4 glass px-4 py-2 md:px-6 md:py-3 rounded-2xl md:rounded-3xl border-white/5 shadow-2xl transition-all hover:bg-white/10 hover:scale-[1.02] duration-300">
+             <div className="flex -space-x-3 md:-space-x-4">
                 {activeUsers.slice(0, 3).map(user => (
                    <Avatar key={user.id} initials={user.initials} color={user.color} size="lg" className="ring-4 ring-slate-950 transition-transform hover:-translate-y-1 hover:z-10" />
                 ))}

@@ -22,7 +22,7 @@ export const TimelineView: React.FC = () => {
   const dayWidth = 100;
 
   return (
-    <div className="flex h-full flex-col glass rounded-[2.5rem] border-white/5 overflow-hidden animate-scale-in">
+    <div className="flex h-full flex-col glass rounded-2xl md:rounded-[2.5rem] border-white/5 overflow-hidden animate-scale-in">
       <div className="flex-1 overflow-auto scrollbar-hide">
         <div className="relative" style={{ width: `${days.length * dayWidth}px`, minHeight: '100%' }}>
           <div className="sticky top-0 z-30 flex border-b border-white/5 bg-slate-900/60 backdrop-blur-md">

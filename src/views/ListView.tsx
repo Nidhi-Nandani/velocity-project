@@ -55,9 +55,9 @@ export const ListView: React.FC = () => {
   };
 
   const renderTaskRow = (task: Task) => (
-    <div className="flex items-center gap-4 border-b border-white/5 bg-slate-900/20 px-6 py-4 hover:bg-white/5 transition-all duration-300 group">
-      <div className="w-1/3 truncate font-black text-[11px] uppercase tracking-wider text-slate-200 group-hover:text-indigo-300 transition-colors">{task.title}</div>
-      <div className="w-40">
+    <div className="flex items-center gap-4 border-b border-white/5 bg-slate-900/20 px-4 md:px-6 py-4 hover:bg-white/5 transition-all duration-300 group min-w-[800px] md:min-w-0">
+      <div className="flex-1 min-w-[200px] truncate font-black text-[10px] md:text-[11px] uppercase tracking-wider text-slate-200 group-hover:text-indigo-300 transition-colors">{task.title}</div>
+      <div className="w-32 md:w-40">
         <select 
           value={task.status}
           onChange={(e) => updateTask(task.id, { status: e.target.value as Status })}
@@ -84,12 +84,12 @@ export const ListView: React.FC = () => {
   );
 
   return (
-    <div className="flex h-full flex-col glass rounded-[2.5rem] border-white/5 overflow-hidden animate-scale-in">
-      <div className="flex items-center gap-4 bg-white/[0.02] border-b border-white/5 px-6 py-5 text-[9px] font-black uppercase tracking-[0.3em] text-indigo-400/70">
-        <button onClick={() => toggleSort('title')} className="w-1/3 text-left hover:text-white transition-colors">
-          Protocol Identifier {sortConfig?.key === 'title' && (sortConfig.direction === 'asc' ? ' ↑' : ' ↓')}
-        </button>
-        <div className="w-40">Status Code</div>
+    <div className="flex h-full flex-col glass rounded-[2.5rem] border-white/5 overflow-auto md:overflow-hidden animate-scale-in">
+    <div className="flex items-center gap-4 bg-white/[0.02] border-b border-white/5 px-4 md:px-6 py-5 text-[9px] font-black uppercase tracking-[0.3em] text-indigo-400/70 min-w-[800px] md:min-w-0">
+      <button onClick={() => toggleSort('title')} className="flex-1 min-w-[200px] text-left hover:text-white transition-colors">
+        Protocol Identifier {sortConfig?.key === 'title' && (sortConfig.direction === 'asc' ? ' ↑' : ' ↓')}
+      </button>
+      <div className="w-32 md:w-40">Status Code</div>
         <button onClick={() => toggleSort('priority')} className="w-24 text-left hover:text-white transition-colors">
           Priority {sortConfig?.key === 'priority' && (sortConfig.direction === 'asc' ? ' ↑' : ' ↓')}
         </button>

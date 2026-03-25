@@ -2,12 +2,11 @@ import type { Task, User, Priority, Status } from '../types';
 import { addDays, format } from 'date-fns';
 
 const USERS: User[] = [
-  { id: '1', name: 'Alice Johnson', initials: 'AJ', color: '#3b82f6' },
-  { id: '2', name: 'Bob Smith', initials: 'BS', color: '#ef4444' },
-  { id: '3', name: 'Charlie Davis', initials: 'CD', color: '#10b981' },
-  { id: '4', name: 'Diana Prince', initials: 'DP', color: '#f59e0b' },
-  { id: '5', name: 'Ethan Hunt', initials: 'EH', color: '#8b5cf6' },
-  { id: '6', name: 'Fiona Gallagher', initials: 'FG', color: '#ec4899' },
+  { id: '1', name: 'Rahul Singh', initials: 'RS', color: '#3b82f6' },
+  { id: '2', name: 'Nidhi Singh', initials: 'NS', color: '#ef4444' },
+  { id: '3', name: 'Neha Singh', initials: 'NeS', color: '#10b981' },
+  { id: '4', name: 'Alok Nawani', initials: 'AN', color: '#f59e0b' },
+  { id: '5', name: 'Sakshi Negi', initials: 'SN', color: '#8b5cf6' },
 ];
 
 const PRIORITIES: Priority[] = ['Low', 'Medium', 'High', 'Critical'];

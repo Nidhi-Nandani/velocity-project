@@ -82,11 +82,22 @@
     -webkit-backdrop-filter: blur(20px);
     background-color: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 2.5rem;
-    padding: 1.5rem;
-    min-width: 340px;
+    border-radius: 2rem;
+    padding: 1rem;
+    min-width: 280px;
+    width: 280px;
     flex: 1;
-    gap: 1.5rem;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .kanban-column {
+      border-radius: 2.5rem;
+      padding: 1.5rem;
+      min-width: 340px;
+      width: auto;
+      gap: 1.5rem;
+    }
   }
 
   .card-shadow {
